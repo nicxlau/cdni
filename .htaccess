@@ -1,3 +1,9 @@
+<IfModule mod_headers.c>
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|swf|svg|eot|woff|woff2|ttf|docx|pdf|rtf|docm|dotx|dotm|docb)$">
+	Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+</IfModule>
+
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	RewriteBase /
