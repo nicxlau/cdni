@@ -43,7 +43,7 @@ vm = new Vue({
 			// if(index=='fontawesome'){
 			//	 this.countSearch = 0;
 			// }
-			this.searchText && (arr = arr.filter(item => item.indexOf(this.searchText) > -1));
+			this.searchText && (arr = arr.filter(item => item.indexOf(this.searchText.toLowerCase()) > -1));
 			//(el=document.getElementById(index))&&(el.style.display = arr.length ? "block" : "none");
             setTimeout(function(index,arr){(el=document.getElementById(index))&&(el.style.display = arr.length ? "block" : "none")},10,index,arr);
 			//(sv=document.getElementById('sv'+index))&&(sv.innerHTML = this.searchText ? this.numberFormat(arr.length)+' of ':'')
